@@ -66,7 +66,7 @@ def main_task():
         send_email(
             sender_email="3275981857@qq.com",
             sender_name="Chen Zhi Ping",
-            sender_auth="gedcfexluvakciaf",
+            sender_auth="",
             receiver_email=receive_address_str,
             subject=f"Daily Exchange Rate Report - {datetime.datetime.now().strftime('%Y-%m-%d')}",
             content=email_content,
