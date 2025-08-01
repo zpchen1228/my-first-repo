@@ -60,15 +60,15 @@ def main_task():
     """
 
     # 发送邮件
-    receive_address=["qidao1200@outlook.com"]
+    receive_address=[""]
     # 在调用send_email前添加转换（新增代码）
     receive_address_str = ", ".join(receive_address)  # 将列表转为字符串
 
     try:
         send_email(
-            sender_email="3275981857@qq.com",
-            sender_name="Chen Zhi Ping",
-            sender_auth="gedcfexluvakciaf",
+            sender_email="",
+            sender_name="",
+            sender_auth="",
             receiver_email=receive_address_str,
             subject=f"Daily Exchange Rate Report - {datetime.datetime.now().strftime('%Y-%m-%d')}",
             content=email_content,
