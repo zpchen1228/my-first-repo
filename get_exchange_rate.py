@@ -7,7 +7,7 @@ from datetime import datetime
 def download_exchange_rate_data():
     """从中国人民银行下载汇率数据并保存到Excel"""
     # 文件路径设置
-    save_dir = r"D:\czp\data\auto_download\exchange_rate"
+    save_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(save_dir, "exchange_rate.xlsx")
 
     # 确保目录存在

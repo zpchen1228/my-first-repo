@@ -5,6 +5,7 @@ import schedule
 import time
 import datetime
 import pytz
+import os
 
 
 def main_task():
@@ -12,7 +13,8 @@ def main_task():
     print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - 开始执行汇率邮件任务")
 
     # 下载汇率数据
-    exchange_file = r"D:\czp\data\auto_download\exchange_rate\exchange_rate.xlsx"
+    save_dir = os.path.dirname(os.path.abspath(__file__))
+    exchange_file =os.path.join(save_dir, "exchange_rate.xlsx")
     download_exchange_rate_data()
 
     # 获取最新的美元和欧元汇率
@@ -66,7 +68,7 @@ def main_task():
         send_email(
             sender_email="3275981857@qq.com",
             sender_name="Chen Zhi Ping",
-            sender_auth="",
+            sender_auth="gedcfexluvakciaf",
             receiver_email=receive_address_str,
             subject=f"Daily Exchange Rate Report - {datetime.datetime.now().strftime('%Y-%m-%d')}",
             content=email_content,
